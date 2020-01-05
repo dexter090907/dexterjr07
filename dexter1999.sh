@@ -150,4 +150,4 @@ echo "GET http://$host/ HTTP/1.1[crlf]Host: $host[crlf]Connection: Keep-Alive[cr
 
 echo "" 
 sleep 2
-echo -e "\e[1;30m🎭SI LO PUEDES IMAGINAR LO PUEDES PROGRAMAR ATT:DEXTER1999\e[0m"
+echo -e "\e[1;36mรเ ℓσ ρµε∂εร เɱαɠเɳαɾ ℓσ ρµε∂εร ρɾσɠɾαɱαɾ αƭƭ:∂εאƭεɾ1999\e[0m"
