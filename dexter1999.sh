@@ -118,7 +118,7 @@ echo "DELETE [host_port] [protocol][crlf]Host: $host[crlf]X-Forwarded-For: $host
 
 echo "" 
 sleep 2
-echo "DELETE [host_port] [protocol][crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]CONNECT [host_port] [protocol][crlf][crlf]"
+echo "CONNECT [host_port] [protocol][crlf][delay_split]TRACE http://$host/ HTTP/1.1[crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]User-Agent: [ua][crlf][crlf]"
 
 echo "" 
 sleep 2
