@@ -42,3 +42,111 @@ echo -ne "\e[1;36mINGRESA TU HOST: \e[1;33m"
 read host 
 echo -e "\e[1;33m"
 echo "GENERANDO PAYLOADS..."
+
+echo "" 
+sleep 2
+echo "GET http://$host/ HTTP/1.1[crlf]Host: $host[crlf]User-Agent: [ua][crlf]Referer: $host[crlf][crlf][delay_split]CONNECT [host_port]@$host [protocol][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "GET [host_port]@$host [protocol][crlf]Host: $host[crlf]X-Online-Host: $host[crlf]X-Forward-Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]CONNECT [host_port] [protocol][crlf][crlf]"
+
+echo ""
+sleep 2
+echo "GET [host_port]@$host [protocol][crlf]Host: $host[crlf]User-Agent: [ua][crlf]CONNECT [host_port] [protocol][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "GET [host_port] [protocol][crlf]Host: $host[crlf]User-Agent: [ua][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "GET $host@[host_port] [protocol][crlf]Host: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "GET [host_port] [protocol][crlf]Host: $host[crlf]X-Forward-Host: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "GET http://$host/ HTTP/1.1[crlf] ٌُْْ[crlf][crlf]CONNECT [host_port][delay_split][crlf]"
+
+echo "" 
+sleep 2
+echo "POST [host_port]@$host [protocol][crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "PUT [host_port]@$host [protocol][crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "PUT $host@[host_port] [protocol][crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Referer: $hos[crlf]CONNECT [host_port] [protocol][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "HEAD $host@[host_port] [protocol][crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "HEAD [host_port] [protocol][crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "TRACE [host_port] [protocol][crlf]Host: $hos[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Referer: $host[crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "OPTIONS [host_port] [protocol][crlf]Host: $host[crlf]User-Agent: [ua][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "OPTIONS [host_port] [protocol][crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf][crlf]"
+
+echo ""
+sleep 2
+echo "PATCH [host_port] [protocol][crlf]Host: $host[crlf]X-Forwarded-For: $hos[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "PROPATCH [host_port] [protocol][crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "DELETE [host_port] [protocol][crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]CONNECT [host_port] [protocol][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "DELETE [host_port] [protocol][crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]CONNECT [host_port] [protocol][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "GET http://$host/ HTTP/1.1[crlf]Host: $host[crlf][crlf][delay_split]CONNECT [host_port] [protocol][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "CONNECT [host_port] [protocol][crlf][delay_split]GET http://host/ HTTP/1.1[crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]CONNECT [host_port] [protocol][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "GET http://$host/ HTTP/1.1[crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]CONNECT [host_port] [protocol][crlf][crlf][delay_split]CONNECT [host_port] [protocol][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "CONNECT [host_port] [protocol][crlf][delay_split]GET http://host/ HTTP/1.1[crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]CONNECT [host_port] [protocol][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "GET http://$host/ HTTP/1.1[crlf]Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]CONNECT [host_port] [protocol][crlf][crlf][delay_split]CONNECT [host_port] [protocol][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "GET http://$host/ HTTP/1.1[crlf]Host: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Referer: $host[crlf][crlf]CONNECT [host_port] [protocol][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "GET http://$host/ HTTP/1.1[crlf]Host: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Referer: $host[crlf][crlf]CONNECT [host_port] [protocol][crlf][crlf]"
+
+echo "" 
+sleep 2
+echo "🎭si lo puedes imaginar lo puedes programar🎭"
